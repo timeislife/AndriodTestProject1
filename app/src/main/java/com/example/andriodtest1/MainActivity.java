@@ -17,7 +17,9 @@ import com.example.andriodtest1.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Context;
 import androidx.appcompat.app.AlertDialog;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,4 +89,17 @@ public class MainActivity extends AppCompatActivity {
        dialog.show();
 
     }
+
+    /** Called when the user touches the button */
+    public void btnToast_Click(View view) {
+
+        Context context = getApplicationContext();
+        CharSequence text = "Hello toast!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+    }
+
 }
