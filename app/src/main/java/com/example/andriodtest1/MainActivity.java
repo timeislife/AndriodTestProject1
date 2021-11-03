@@ -17,6 +17,7 @@ import com.example.andriodtest1.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import androidx.appcompat.app.AlertDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,5 +73,18 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+
+    /** Called when the user touches the button */
+    public void btnTest_Click(View view) {
+
+        // Do something in response to button click
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setMessage(R.string.dialog1_message)
+                .setTitle(R.string.dialog1_title);
+       AlertDialog dialog = builder.create();
+       dialog.show();
+
     }
 }
