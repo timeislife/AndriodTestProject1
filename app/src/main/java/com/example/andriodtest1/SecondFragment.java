@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.andriodtest1.databinding.FragmentSecondBinding;
+import android.webkit.WebView;
+import android.webkit.WebSettings;
+import android.webkit.WebViewClient;
 
 public class SecondFragment extends Fragment {
 
@@ -20,6 +23,15 @@ public class SecondFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
+
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_second, null);
+        WebView myWebView = (WebView) root.findViewById(R.id.webview1);
+        /*WebSettings mWebSettings = myWebView.getSettings();
+        mWebSettings.setJavaScriptEnabled(true);
+        WebViewClient mWebViewClient = new WebViewClient();
+        myWebView.setWebViewClient(mWebViewClient);
+         */
+        myWebView.loadUrl("https://www.baidu.com");
 
         binding = FragmentSecondBinding.inflate(inflater, container, false);
         return binding.getRoot();
@@ -36,6 +48,7 @@ public class SecondFragment extends Fragment {
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
         });
+
     }
 
     @Override

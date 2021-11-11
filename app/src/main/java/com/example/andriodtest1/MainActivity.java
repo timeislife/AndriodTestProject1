@@ -20,11 +20,15 @@ import android.view.MenuItem;
 import android.content.Context;
 import androidx.appcompat.app.AlertDialog;
 import android.widget.Toast;
+import android.Manifest;
+import android.util.Log;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,23 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        builder=new AlertDialog.Builder(MainActivity.this);
+        AlertDialog alertDialog=builder.create();
+        alertDialog.setTitle("Permission check");
+
+        int REQUEST_CODE = 2;
+        if (PermissionUtility.HasPermisson(this, Manifest.permission.INTERNET)) {
+            //如果已经拥有改权限
+            Log.i("request","own");
+            alertDialog.setMessage("already has internet permission");
+        } else {
+            //没有改权限，需要进行请求
+            PermissionUtility.RequestPermission(this, Manifest.permission.INTERNET, REQUEST_CODE);
+            alertDialog.setMessage("INTERNET permission requested.");
+        }
+        alertDialog.show();
+
     }
 
     @Override
