@@ -9,28 +9,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="40dp">
+        <!--
+               <TextView
+                   android:id="@+id/textview_second"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+-->
+       <!--<RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">-->
 
-        <TextView
-            android:id="@+id/textview_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
-        <WebView
-            android:id="@+id/webview1"
-            android:layout_width="409dp"
-            android:layout_height="498dp">
+                  <WebView
+                      android:id="@+id/webview1"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
 
-        </WebView>
+                  </WebView>
+        <!--</RelativeLayout>-->
 
-        <Button
-            android:id="@+id/button_second"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="@string/previous"
-            tools:ignore="TouchTargetSizeCheck" />
-    </LinearLayout>
+         <Button
+                 android:id="@+id/button_second"
+                 android:layout_width="200dp"
+                 android:layout_height="50dp"
+                 android:text="@string/previous"
+                 tools:ignore="TouchTargetSizeCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+         </LinearLayout>
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
