@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_CheckboxTestFragment"
+            app:destination="@id/CheckboxTestFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -25,4 +28,9 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/CheckboxTestFragment"
+        android:name="com.example.andriodtest1.CheckboxTest"
+        android:label="fragment_checkbox_test"
+        tools:layout="@layout/fragment_checkbox_test" />
 </navigation>

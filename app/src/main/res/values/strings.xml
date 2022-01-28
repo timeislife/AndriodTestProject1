@@ -10,4 +10,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="dialog1_message">dialog1 message</string>
     <string name="dialog1_title">dialog1 title</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="checkbox1_text">Checkbox1</string>
+    <string name="checkbox2_text">Checkbox2</string>
 </resources>
